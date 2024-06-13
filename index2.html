@@ -15,17 +15,14 @@
 <body>
     <div id="app">
         <div @click="num ++" class="font-mono w-screen h-screen flex flex-col items-center justify-center text-4xl">
-            <div class="mb-8 text-base"> elp last: click: {{num}}</div>
+            <div class="mb-8 text-base"> elp v2.2.19: click: {{num}}</div>
 
             <el-select clearable v-model="value" placeholder="Select" style="width: 240px">
                 <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"
                     :disabled="item.disabled"></el-option>
             </el-select>
 
-            <el-link href="./index-pr.html" type="primary" class="mt-10 border px-5 rounded-full">./ pr #16393
-                html</el-link>
-
-            <el-link href="./index2.html" type="primary" class="mt-5 border px-5 rounded-full">./ elp-v2.2.19
+            <el-link href="./index.html" type="primary" class="mt-10 border px-5 rounded-full">./ elp last
                 html</el-link>
         </div>
     </div>
@@ -34,7 +31,7 @@
 </html>
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script src="https://unpkg.com/element-plus"></script>
+<script src="https://unpkg.com/element-plus@2.2.19/dist/index.full.js"></script>
 <script type="module">
     const { createApp, ref, onMounted } = Vue
 
