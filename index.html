@@ -15,9 +15,9 @@
 <body>
     <div id="app">
         <div class="font-mono w-screen h-screen flex flex-col items-center justify-center text-4xl">
-            <div class="mb-8 text-base"> elp last </div>
+            <div class="mb-8 text-base"> elp last: click: {{num}}</div>
 
-            <el-select clearable v-model="value" placeholder="Select" style="width: 240px">
+            <el-select @click="num ++" clearable v-model="value" placeholder="Select" style="width: 240px">
                 <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"
                     :disabled="item.disabled"></el-option>
             </el-select>
@@ -36,6 +36,8 @@
 
     const vue3Composition = {
         setup() {
+            const num = ref(0)
+
             const value = ref('')
             const options = [
                 {
@@ -63,7 +65,7 @@
 
             onMounted(() => { })
 
-            return { value, options }
+            return { num, value, options }
         }
     }
 
