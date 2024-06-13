@@ -14,10 +14,10 @@
 
 <body>
     <div id="app">
-        <div class="font-mono w-screen h-screen flex flex-col items-center justify-center text-4xl">
+        <div @click="num ++" class="font-mono w-screen h-screen flex flex-col items-center justify-center text-4xl">
             <div class="mb-8 text-base"> elp last: click: {{num}}</div>
 
-            <el-select @click="num ++" clearable v-model="value" placeholder="Select" style="width: 240px">
+            <el-select clearable v-model="value" placeholder="Select" style="width: 240px">
                 <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"
                     :disabled="item.disabled"></el-option>
             </el-select>
