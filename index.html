@@ -15,7 +15,7 @@
 <body>
     <div id="app">
         <div class="font-mono w-screen h-screen flex flex-col items-center justify-center text-4xl">
-            <el-select v-model="value" placeholder="Select" style="width: 240px">
+            <el-select clearable v-model="value" placeholder="Select" style="width: 240px">
                 <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"
                     :disabled="item.disabled"></el-option>
             </el-select>
